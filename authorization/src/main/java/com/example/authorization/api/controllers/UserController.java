@@ -43,7 +43,7 @@ public class UserController {
             } else if (iae.getMessage().equals("Empty name")) {
                 return new ResponseEntity<>("Name shouldn't be empty", HttpStatus.BAD_REQUEST);
             } else {
-                return new ResponseEntity<>("Something strange happened", HttpStatus.INTERNAL_SERVER_ERROR);
+                return new ResponseEntity<>(iae.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
             }
         } catch (Exception e) {
             return new ResponseEntity<>("Something strange happened", HttpStatus.INTERNAL_SERVER_ERROR);

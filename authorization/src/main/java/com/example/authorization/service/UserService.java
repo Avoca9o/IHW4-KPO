@@ -37,7 +37,7 @@ public class UserService {
                 throw new IllegalArgumentException("Email already exists");
             }
         }
-//        if (user.getUsername().equals("")) {
+//        if (user.getUsername() == null || user.getUsername().isEmpty()) {
 //            throw new IllegalArgumentException("Empty name");
 //        }
         if (roles.isEmpty()) {
